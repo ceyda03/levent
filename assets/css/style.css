@@ -185,9 +185,9 @@ header label{
 
 /* Form */
 
-::placeholder {
+/* ::placeholder {
     font-family: "Montserrat";
-}
+} */
 
 .form-area {
     font-family: "Montserrat";
