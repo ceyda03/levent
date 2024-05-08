@@ -52,7 +52,7 @@
                 </div>
                 <div class="form-row">
                     <input type="email" id="email" name="email" class="form-input" placeholder="Email">
-                    <input type="phone" id="phone" name="phone" class="form-input" placeholder="Telefon">
+                    <input type="phone" id="phone" name="tel" class="form-input" placeholder="Telefon">
                 </div>
                 <textarea id="message" name="message" class="form-input" rows="5" placeholder="Almak istediğiniz hizmet ve teklifiniz"></textarea>
                 <input type="submit" class="form-button" value="Gönder">
