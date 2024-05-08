@@ -18,9 +18,17 @@
 }
 
 body{
+    font-family: "Montserrat";
     min-height: 100vh;
     background-color: var(--white);
 }
+
+.container {
+    margin-top: 64px;
+}
+
+
+/* Navbar */
 
 header{
     position: fixed;
@@ -34,7 +42,6 @@ header{
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    font-family: "Montserrat";
 }
 
 header .navbar ul{
@@ -96,161 +103,6 @@ header label{
 }
 
 
-/* Slider */
-
-.slider-container {
-    /* top: 64px; */
-    margin-top: 64px;
-    width: 100%;
-    /* height: 400px; */
-    height: 40%;
-    /* position: relative; */
-    box-shadow: 0 5px 10px inset rgba(0,0,0,.1);
-}
-
-.slider {
-    position: relative;
-}
-
-.slider-item {
-    display: none;
-    width: 100%;
-}
-
-.slider-item img {
-    vertical-align: middle;
-    width: 100%;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: var(--white);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,.5);
-}
-
-.caption {
-    color: var(--white);
-    font-size: 30px;
-    font-family: "Montserrat";
-    padding: 8px 12px;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    bottom: 8px;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4;}
-    to {opacity: 1;}
-}
-
-
-/* Form */
-
-::placeholder {
-    font-family: "Montserrat";
-}
-
-.form-area {
-    font-family: "Montserrat";
-    display: flex;
-    width: 90%;
-    height: 500px;
-    margin: 6rem auto 3rem;
-}
-
-.form-info {
-    width: 50%;
-    height: 100%;
-    background-color: var(--red);
-}
-
-.form {
-    width: 50%;
-    border: 1px solid var(--darkgray);
-    padding: 4rem;
-}
-
-.form h3 {
-    font-size: 26px;
-    margin-bottom: 0.5rem;
-}
-
-.form p {
-    margin-bottom: 1rem;
-}
-
-.form-row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-row .form-input {
-    width: 48%;
-}
-
-.form-input {
-    border: 1px solid var(--darkgray);
-    padding: 12px;
-    width: 100%;
-    margin-bottom: 1.5rem;
-}
-
-textarea {
-    resize: none;
-}
-
-.form-button {
-    border: none;
-    background-color: var(--red);
-    color: var(--white);
-    font-size: 18px;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.form-button:hover {
-    background-color: var(--darkred);
-}
-
 /* Footer */
 
 footer {
@@ -267,7 +119,6 @@ footer {
     padding: 50px 50px 60px 50px;
     margin-top: 80px;
     font-family: "Montserrat";
-
 }
 
 .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
@@ -402,13 +253,315 @@ footer {
     color: var(--red);
 }
 
+
+/* Page Title & Breadcrumb */
+
+.page-title {
+    width: 90%;
+    margin: 94px auto 0;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.breadcrumb {
+    list-style-type: none;
+    display: flex;
+    margin: auto 0;
+}
+
+.page-link {
+    text-decoration: none;
+    color: var(--darkgray);
+}
+
+.page-link.active {
+    color: var(--black);
+    font-weight: 500;
+}
+
+.breadcrumb li+li:before {
+    padding: 8px;
+    color: var(--darkgray);
+    content: ">";
+}
+
+
+/* Slider */
+
+.slider-container {
+    width: 100%;
+    /* height: 400px; */
+    height: 40%;
+    /* position: relative; */
+    box-shadow: 0 5px 10px inset rgba(0,0,0,.1);
+}
+
+.slider {
+    position: relative;
+}
+
+.slider-item {
+    display: none;
+    width: 100%;
+}
+
+.slider-item img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,.5);
+}
+
+.caption {
+    color: var(--white);
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 8px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1;}
+}
+
+
+/* Form */
+
+::placeholder {
+    font-family: "Montserrat";
+}
+
+.form-area {
+    display: flex;
+    width: 90%;
+    /* height: 500px; */
+    margin: 3rem auto 3rem;
+}
+
+.form-info {
+    width: 50%;
+    height: 100%;
+    /* background-color: var(--red); */
+}
+
+.form {
+    width: 50%;
+    border: 1px solid var(--darkgray);
+    padding: 4rem;
+}
+
+.offer-title {
+    font-size: 26px;
+    margin-bottom: 0.5rem;
+}
+
+.contact-title {
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
+
+.form p {
+    margin-bottom: 1rem;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-row .form-input {
+    width: 48%;
+}
+
+.form-input {
+    border: 1px solid var(--darkgray);
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-button {
+    font-family: "Montserrat";
+    border: none;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.form-button:hover {
+    background-color: var(--darkred);
+}
+
+
+/* Contact Info */
+
+.contact-info {
+    margin: 4rem 0;
+}
+
+.contact-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.contact-info i:not(.contact-icons *) {
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px 10px 0;
+    vertical-align: middle;
+}
+
+.contact-info i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.contact-info p {
+    display: inline-block;
+    color: var(--black);
+    vertical-align: middle;
+    margin: 0;
+}
+
+.contact-info p a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.contact-company-about {
+    color: var(--black);
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.contact-company-about span {
+    display: block;
+    color: var(--red);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.contact-icons {
+    margin-top: 25px;
+}
+
+.contact-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: var(--red);
+    border-radius: 2px;
+    font-size: 20px;
+    color: var(--white);
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+}
+
+.contact-icons a:hover {
+    background-color: var(--darkred);
+}
+
+
+/* Map */
+
+.map {
+    width: 90%;
+    height: 60vh;
+    margin: 2rem auto;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
 @media (max-width:426px) {
+    /* Page Title & Breadcrumb */
+    .page-title {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .breadcrumb {
+        margin: 10px auto 0px;
+    }
+
+    /* Form */
     .form-area {
         width: 100%;
+        margin: 0;
     }
 
     .form {
         padding: 4rem 2rem;
+    }
+
+    .contact-info {
+        width: 90%;
+        margin: 4rem auto;
     }
 }
 
@@ -416,9 +569,6 @@ footer {
     footer {
         position: static;
     }
-    /* header {
-        padding-top: 40px;
-    } */
 }
 
 @media (max-width: 880px) {
@@ -465,11 +615,6 @@ footer {
 
     header .navbar ul li ul li{
         background: var(--lightgray);
-    }
-    /* ???? */
-    header .navbar ul li ul li ul{
-    width: 100%;
-    left: 0;
     }
 
     #menu-bar:checked ~ .navbar{
