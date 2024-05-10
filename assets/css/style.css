@@ -539,17 +539,75 @@ textarea {
 }
 
 
-@media (max-width:426px) {
-    /* Page Title & Breadcrumb */
-    .page-title {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Services */
 
-    .breadcrumb {
-        margin: 10px auto 0px;
-    }
+.titles {
+    display: flex;
+    width: 90%;
+    margin: 2rem auto;
+    justify-content: center;
+}
 
+.service-title {
+    display: flex;
+    cursor: pointer;
+    padding: 20px 30px;
+    align-items: center;
+    border-bottom: 3px solid transparent;
+}
+
+.service-title p {
+    color: var(--darkgray);
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+.service-title.active {
+    border-bottom: 3px solid var(--black);
+}
+
+.service-title.active p{
+    color: var(--black);
+}
+
+.services {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.service-item:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.service-img {
+    width: 49%;
+}
+
+.service-info {
+    width: 49%;
+}
+
+.service-info h3 {
+    font-size: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.service-info p {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+
+@media (max-width: 426px) {
     /* Form */
     .form-area {
         width: 100%;
@@ -566,7 +624,48 @@ textarea {
     }
 }
 
-@media (max-height:800px) {
+@media (max-width: 561px) {
+    /* Page Title & Breadcrumb */
+    .page-title {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .breadcrumb {
+        margin: 10px auto 0px;
+    }
+}
+
+@media (max-width: 800px) {
+    /* Services */
+    .service-title {
+        padding: 15px 25px;
+    }
+
+    .service-title p {
+        font-size: 24px;
+    }
+
+    .service-item, .service-item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .service-img, .service-info {
+        width: 100%;
+    }
+
+    .service-info h3 {
+        font-size: 30px;
+        margin: 1.5rem 0;
+    }
+
+    .service-info p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+@media (max-height: 800px) {
     footer {
         position: static;
     }
@@ -584,7 +683,7 @@ textarea {
     }
 }
 
-@media(max-width:991px){
+@media(max-width: 991px){
     header{
         padding: 10px 20px 5px;
     }
